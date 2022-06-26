@@ -157,6 +157,7 @@ textarea {
   border: thin solid #009879;
   height: 100px;
   width: 300px;
+  vertical-align: middle;
 }
 textarea:focus {
   border-color: #009879;

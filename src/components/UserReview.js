@@ -13,15 +13,6 @@ const UserReview = () => {
   });
   const [Allreview, setAllreview] = useState({ fetchreviews: "" });
 
-  useEffect(() => {
-    fetch("http://localhost:9000/product/" + id).then((response) => {
-      response.json().then((result) => {
-        setState({ list: result });
-      });
-    });
-    getAllreviewdata();
-  }, []);
-
   const reviewUpdate = (event) => {
     setReviewData((prevState) => {
       return {
@@ -50,6 +41,15 @@ const UserReview = () => {
       });
     });
   };
+  
+  useEffect(() => {
+    fetch("http://localhost:9000/product/" + id).then((response) => {
+      response.json().then((result) => {
+        setState({ list: result });
+      });
+    });
+    getAllreviewdata();
+  }, []);
 
   return (
     <div>

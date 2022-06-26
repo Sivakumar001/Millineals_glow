@@ -46,17 +46,11 @@ class Checkout extends Component {
         <Container>
           <br />
           <h1 className="text">Checkout</h1>
-          <div
-            style={{
-              float: "left",
-              marginLeft: "15%",
-              marginTop: "5%",
-            }}
-          >
-            <Container>
-              <label for="textarea">Address</label>
-              <br />
-              <br />
+          <div className="row">
+          <div className="col">
+            <Container><br/>
+              <input type="text" placeholder="enter your name" required></input><br /><br />
+              <input type='text' placeholder="enter phone number" required></input><br /><br />
               <textarea placeholder="Enter your address" row="5" />
               <br />
               <br />
@@ -83,13 +77,7 @@ class Checkout extends Component {
               </Button>
             </Container>
           </div>
-          <div
-            style={{
-              float: "left",
-              marginLeft: "15%",
-              marginTop: "5%",
-            }}
-          >
+          <div className="col-lg-auto">
             <Container>
               {this.state.list ? (
                 <Table className="styled-table">
@@ -122,6 +110,7 @@ class Checkout extends Component {
                 <p>Loading...</p>
               )}
             </Container>
+          </div>
           </div>
         </Container>
       </div>
