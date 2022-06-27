@@ -12,7 +12,15 @@ const UserReview = () => {
     productname: "hello",
   });
   const [Allreview, setAllreview] = useState({ fetchreviews: "" });
-
+  
+  const getAllreviewdata = () => {
+    fetch("http://localhost:9000/get").then((response) => {
+      response.json().then((res) => {
+        setAllreview({ fetchreviews: res });
+      });
+    });
+  };
+  
   const reviewUpdate = (event) => {
     setReviewData((prevState) => {
       return {
@@ -31,14 +39,6 @@ const UserReview = () => {
     }).then((response) => {
       alert("Review add successfully");
       getAllreviewdata();
-    });
-  };
-
-  const getAllreviewdata = () => {
-    fetch("http://localhost:9000/get").then((response) => {
-      response.json().then((res) => {
-        setAllreview({ fetchreviews: res });
-      });
     });
   };
   

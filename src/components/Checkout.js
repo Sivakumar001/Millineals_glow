@@ -28,6 +28,7 @@ class Checkout extends Component {
       }).then(() => this.getData())
     );
     alert("Ordered Successfully");
+    window.location="/";
   }
   total() {
     /* eslint-disable */
