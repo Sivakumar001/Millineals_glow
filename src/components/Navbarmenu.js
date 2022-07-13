@@ -9,9 +9,9 @@ class Navbarmenu extends Component {
         <Navbar className="navbar" variant="dark" expand="lg">
           <Container>
             {!localStorage.getItem("admin") ? (
-              <Navbar.Brand href="/">Millennials Glow</Navbar.Brand>
+              <Navbar.Brand href="/">Gorgeous Now</Navbar.Brand>
             ) : (
-              <Navbar.Brand href="/admin">Millennials Glow</Navbar.Brand>
+              <Navbar.Brand href="/admin">Gorgeous Now</Navbar.Brand>
             )}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
